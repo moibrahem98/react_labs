@@ -12,11 +12,6 @@ export const App = () => {
   const addPost = (newPost) => {
     setPosts([...posts, newPost]);
   };
-//   removeTodo(name){
-//     this.setState({
-//         todo: this.state.todo.filter(el => el !== name)
-//     })
-// }
 
   return (
     <div className="container">

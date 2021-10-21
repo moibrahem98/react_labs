@@ -4,6 +4,15 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.head {
+    background-color: gray;
+    color: wheat;
+    width: fit-content;
+    padding: 5px;
+    margin-top: 1px;
+    border-radius: 5px;
+}
+
 .card-background {
     background-color: lightgray;
 }
@@ -12,4 +21,12 @@ body {
     background-color: slategray;
     color: wheat;
     padding: 20px;
+}
+
+.rm {
+    position: absolute;
+    right: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-block: 2px;
 }

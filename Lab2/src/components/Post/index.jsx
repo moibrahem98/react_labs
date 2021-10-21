@@ -5,7 +5,7 @@ export const Post = (props) => {
     <Card>
 
       <div>
-        <button>x</button>
+        <button className="btn btn-danger rm">x</button>
         <h2>{props.title}</h2>
         <h4>{props.body}</h4>
       </div>
