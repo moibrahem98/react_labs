@@ -1,0 +1,15 @@
+body {
+    background-color: tan;
+    padding-top: 130px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card-background {
+    background-color: lightgray;
+}
+
+.card {
+    background-color: slategray;
+    color: wheat;
+    padding: 20px;
+}

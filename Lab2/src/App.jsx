@@ -1,16 +1,9 @@
+// eslint-disable-next-line no-unused-vars
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { ViewPosts } from "./components/ViewPosts";
 import { AddPost } from "./components/AddPost";
-
 export const App = () => {
   const [posts, setPosts] = useState([]);
-
-  // useEffect(() => {
-  //   axios.get("https://jsonplaceholder.typicode.com/posts").then((result) => {
-  //     setPosts(result.data);
-  //   });
-  // }, [posts]);
 
   const handleDelete = () => {
     setPosts([]);
@@ -19,6 +12,11 @@ export const App = () => {
   const addPost = (newPost) => {
     setPosts([...posts, newPost]);
   };
+//   removeTodo(name){
+//     this.setState({
+//         todo: this.state.todo.filter(el => el !== name)
+//     })
+// }
 
   return (
     <div className="container">

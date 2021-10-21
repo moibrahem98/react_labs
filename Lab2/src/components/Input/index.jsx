@@ -5,7 +5,7 @@ export const Input = (props) => {
   };
 
   return (
-    <div className="input-group input-group-lg">
+    <div className="input-group input-group-lg m-2">
       <div className="input-group-prepend">
         <span className="input-group-text" id="inputGroup-sizing-lg">
           {props.label}

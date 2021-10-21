@@ -1,24 +1,25 @@
 import { useState } from "react";
 import { Input } from "../Input";
+import "../AddPost/main.css";
+
 
 export const AddPost = (props) => {
-  const [title, setTitle] = useState("Please enter post title");
-  const [body, setBody] = useState("Please enter post body");
+  const [Name, setTitle] = useState("Add A Misson To Do It");
+  const [Details, setBody] = useState("Mission Details");
 
   const handleSubmit = () => {
-    console.log("Calling to backend service");
-    props.addPost({ title, body });
+    props.addPost({ Name, Details });
   };
 
   return (
     <div className="card">
-      <h1>Add Post</h1>
+      <h1>Todo App</h1>
 
-      <Input value={title} setValue={setTitle} label="Title" />
-      <Input value={body} setValue={setBody} label="Body" />
+      <Input value={Name} setValue={setTitle} label="Name" />
+      <Input value={Details} setValue={setBody} label="Details" />
 
-      <button onClick={handleSubmit} className="btn btn-primary">
-        Add Post
+      <button onClick={handleSubmit} className="btn btn-primary m-2">
+        Add
       </button>
     </div>
   );

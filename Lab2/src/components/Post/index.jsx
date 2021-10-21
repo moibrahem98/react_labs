@@ -5,8 +5,9 @@ export const Post = (props) => {
     <Card>
 
       <div>
-        <h4>{props.title}</h4>
-        <p>{props.body}</p>
+        <button>x</button>
+        <h2>{props.title}</h2>
+        <h4>{props.body}</h4>
       </div>
       
     </Card>
