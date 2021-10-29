@@ -1,5 +1,4 @@
 export const Input = (props) => {
-    
   const handleChange = (e) => {
     props.setValue(e.target.value);
   };

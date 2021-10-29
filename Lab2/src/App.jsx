@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ViewPosts } from "./components/ViewPosts";
 import { AddPost } from "./components/AddPost";
 export const App = () => {
@@ -12,7 +12,6 @@ export const App = () => {
   const addPost = (newPost) => {
     setPosts([...posts, newPost]);
   };
-
   return (
     <div className="container">
       <div className="row">
@@ -20,10 +19,7 @@ export const App = () => {
           <AddPost addPost={addPost} />
         </div>
         <div className="col-6">
-          <ViewPosts
-            posts={posts}
-            onDelete={handleDelete}
-          />
+          <ViewPosts posts={posts} onDelete={handleDelete} />
         </div>
       </div>
     </div>
