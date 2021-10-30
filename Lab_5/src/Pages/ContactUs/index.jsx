@@ -9,8 +9,8 @@ export const ContactUs = () => {
   const history = useHistory();
 
   const submitMsg = () => {
-    console.log(email);
-    console.log(msg);
+    // console.log(email);
+    // console.log(msg);
     history.push("/students");
   };
 

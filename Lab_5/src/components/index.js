@@ -4,3 +4,7 @@ export * from "./Navbar";
 export * from "./StTable";
 export * from "./ViewList";
 export * from "./ProtectedRoute";
+export * from "./AddPost";
+export * from "./ViewPosts";
+export * from "./Card";
+export * from "./Post";

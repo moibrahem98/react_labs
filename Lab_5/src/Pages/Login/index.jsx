@@ -1,24 +1,23 @@
 import { Input } from "../../components";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useHistory, Route, Redirect } from "react-router-dom";
+import { AuthContext } from "./../../contexts/AuthContext";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isValidCred, setIsValidCred] = useState(true);
+  const authCtx = useContext(AuthContext);
 
   const history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (email === "a@a.com" && password === "123") {
-      localStorage.setItem("token", "123");
-      history.replace("/main-page");
-    } else setIsValidCred(false);
+    if (authCtx.login(email, password)) history.replace("/main-page");
+    else setIsValidCred(false);
   };
-  const isLoggedIn = localStorage.getItem("token") === "123";
 
-  return !isLoggedIn ? (
+  return !authCtx.isLoggedIn ? (
     <div className="d-flex justify-content-center">
       <form className="card p-3 col-6" onSubmit={handleSubmit}>
         <Input

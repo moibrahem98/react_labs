@@ -1,13 +1,15 @@
 import { Input } from "../";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
+import { AuthContext } from "./../../contexts/AuthContext";
 
 export const AddStudent = (props) => {
   const [stid, setStid] = useState("");
   const [stName, setStName] = useState("");
   const [course, setCourse] = useState("");
   const [grade, setGrade] = useState("");
-  const isLoggedIn = localStorage.getItem("token") === "123";
+  // const isLoggedIn = localStorage.getItem("token") === "123";
+  const authCtx = useContext(AuthContext);
 
   const history = useHistory();
 
@@ -16,10 +18,8 @@ export const AddStudent = (props) => {
   };
 
   const handleLogOut = () => {
-    if (isLoggedIn) {
-      localStorage.removeItem("token");
-      history.replace("/login");
-    }
+    authCtx.logout();
+    history.replace("/login");
   };
 
   return (

@@ -1,6 +1,6 @@
 import { Route, Redirect, Switch } from "react-router-dom";
 import { Navbar, ProtectedRoute } from "./components";
-import { Students, Users, UserDetails, ContactUs, Login } from "./Pages";
+import { Students, Posts, Users, UserDetails, ContactUs, Login } from "./Pages";
 
 export const App = () => {
   return (
@@ -8,6 +8,9 @@ export const App = () => {
       <Navbar />
       <div className="container">
         <Switch>
+          <ProtectedRoute path="/posts">
+            <Posts />
+          </ProtectedRoute>
           <ProtectedRoute path="/students">
             <Students />
           </ProtectedRoute>
@@ -24,7 +27,7 @@ export const App = () => {
             <Login />
           </Route>
           <Route path="/">
-            <Redirect to="/students" />
+            <Redirect to="/posts" />
           </Route>
         </Switch>
       </div>
